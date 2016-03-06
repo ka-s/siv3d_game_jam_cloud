@@ -1,14 +1,19 @@
-﻿
-# include <Siv3D.hpp>
+﻿//
+// Main.cpp
+//
+
+#include "stdafx.h"
+
+using namespace std;
 
 void Main()
 {
-    const Font font(30);
+    // ゲームインスタンス作成
+    auto game = make_shared<Game>();
 
     while (System::Update())
     {
-        font(L"ようこそ、Siv3D の世界へ！").draw();
-
-        Circle(Mouse::Pos(), 50).draw({ 255, 0, 0, 127 });
+        // ゲームを走らせる
+        game->run();
     }
 }
