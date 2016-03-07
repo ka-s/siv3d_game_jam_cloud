@@ -22,6 +22,9 @@ private:
     // •`‰æ
     void draw();
 
+    // ƒV[ƒ“Ø‚è‘Ö‚¦
+    void scene_changer();
+
 public:
     Game();
     ~Game();

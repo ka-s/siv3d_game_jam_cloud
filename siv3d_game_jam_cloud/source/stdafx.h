@@ -8,7 +8,10 @@
 #include <memory>
 
 #include "SceneNumber.h"
+#include "Const.h"
 
 #include "Scene.h"
 #include "Title.h"
+#include "Play.h"
+#include "Result.h"
 #include "Game.h"

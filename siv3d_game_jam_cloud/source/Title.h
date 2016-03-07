@@ -8,6 +8,10 @@
 class Title : public Scene
 {
 private:
+    // タイトルテキスト
+    Font f_title;
+    // サブテキスト
+    Font f_sub_text;
 
 public:
     Title();

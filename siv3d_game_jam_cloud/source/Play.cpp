@@ -1,0 +1,27 @@
+//
+// Play.cpp
+//
+
+#include "stdafx.h"
+
+Play::Play()
+{
+
+}
+
+Play::~Play()
+{
+
+}
+
+// çXêV
+void Play::update(eScene* _next_scene)
+{
+
+}
+
+// ï`âÊ
+void Play::draw()
+{
+
+}
