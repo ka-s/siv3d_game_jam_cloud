@@ -187,11 +187,16 @@
     <Font Include="Example\YomogiFont.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\Character.cpp" />
+    <ClCompile Include="source\Enemy.cpp" />
     <ClCompile Include="source\Game.cpp" />
     <ClCompile Include="source\Main.cpp" />
     <ClCompile Include="source\Play.cpp" />
+    <ClCompile Include="source\Player.cpp" />
     <ClCompile Include="source\Result.cpp" />
     <ClCompile Include="source\Scene.cpp" />
+    <ClCompile Include="source\Soldier.cpp" />
+    <ClCompile Include="source\Spider.cpp" />
     <ClCompile Include="source\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -199,12 +204,17 @@
     <ClCompile Include="source\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Character.h" />
     <ClInclude Include="source\Const.h" />
+    <ClInclude Include="source\Enemy.h" />
     <ClInclude Include="source\Game.h" />
     <ClInclude Include="source\Play.h" />
+    <ClInclude Include="source\Player.h" />
     <ClInclude Include="source\Result.h" />
     <ClInclude Include="source\Scene.h" />
     <ClInclude Include="source\SceneNumber.h" />
+    <ClInclude Include="source\Soldier.h" />
+    <ClInclude Include="source\Spider.h" />
     <ClInclude Include="source\stdafx.h" />
     <ClInclude Include="source\Title.h" />
   </ItemGroup>

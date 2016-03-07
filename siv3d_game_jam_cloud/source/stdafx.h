@@ -10,6 +10,12 @@
 #include "SceneNumber.h"
 #include "Const.h"
 
+#include "Character.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Soldier.h"
+#include "Spider.h"
+
 #include "Scene.h"
 #include "Title.h"
 #include "Play.h"
