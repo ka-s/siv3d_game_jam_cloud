@@ -7,11 +7,11 @@
 // 兵士クラス
 class Soldier : public Player
 {
-public:
+private:
     // メッシュ
     Box mesh;
 
-private:
+public:
     Soldier(Vec3 _location);
     ~Soldier();
 

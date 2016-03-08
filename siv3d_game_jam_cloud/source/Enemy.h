@@ -14,4 +14,12 @@ protected:
 public:
     Enemy();
     ~Enemy();
+
+    // XV
+    void update() override;
+    // •`‰æ
+    void draw() override;
+
+    // ˆÚ“®
+    void move();
 };

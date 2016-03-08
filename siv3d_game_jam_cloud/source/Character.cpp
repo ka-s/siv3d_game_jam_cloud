@@ -20,3 +20,30 @@ Character::~Character()
 {
 
 }
+
+// 被ダメージ
+void Character::damage(float _damage)
+{
+    hit_point -= _damage;
+}
+
+// 死亡処理
+void Character::dead()
+{
+    if (hit_point <= 0)
+    {
+        delete this;
+    }
+}
+
+// コスト取得
+float Character::get_cost()
+{
+    return cost;
+}
+
+// 攻撃力取得
+float Character::get_attack()
+{
+    return attack;
+}

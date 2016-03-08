@@ -14,3 +14,21 @@ Enemy::~Enemy()
 {
 
 }
+
+// XV
+void Enemy::update()
+{
+
+}
+
+// •`‰æ
+void Enemy::draw()
+{
+
+}
+
+// ˆÚ“®
+void Enemy::move()
+{
+    location.x -= speed;
+}

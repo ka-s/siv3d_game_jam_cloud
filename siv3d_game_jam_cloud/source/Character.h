@@ -25,4 +25,14 @@ public:
     virtual void update() = 0;
     // 描画
     virtual void draw() = 0;
+
+    // 被ダメージ
+    void damage(float _damage);
+    // 死亡処理
+    void dead();
+
+    // コスト取得
+    float get_cost();
+    // 攻撃力取得
+    float get_attack();
 };
