@@ -29,7 +29,8 @@ Spider::~Spider()
 // 更新
 void Spider::update()
 {
-
+    // 親関数呼び出し
+    Enemy::update();
 }
 
 // 描画

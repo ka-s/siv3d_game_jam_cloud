@@ -16,7 +16,7 @@ public:
     ~Soldier();
 
     // XV
-    void update() override;
+    void update();
     // •`‰æ
     void draw() override;
 };

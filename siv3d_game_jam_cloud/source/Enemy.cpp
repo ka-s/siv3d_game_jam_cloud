@@ -18,7 +18,8 @@ Enemy::~Enemy()
 // XV
 void Enemy::update()
 {
-
+    // “®‚­
+    move();
 }
 
 // •`‰æ

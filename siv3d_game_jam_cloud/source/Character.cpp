@@ -28,12 +28,14 @@ void Character::damage(float _damage)
 }
 
 // €–Sˆ—
-void Character::dead()
+bool Character::is_dead()
 {
     if (hit_point <= 0)
     {
-        delete this;
+        return true;
     }
+
+    return false;
 }
 
 // ƒRƒXƒgæ“¾

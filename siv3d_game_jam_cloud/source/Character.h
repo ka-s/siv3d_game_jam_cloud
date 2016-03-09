@@ -29,7 +29,7 @@ public:
     // 被ダメージ
     void damage(float _damage);
     // 死亡処理
-    void dead();
+    bool is_dead();
 
     // コスト取得
     float get_cost();
