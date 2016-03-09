@@ -36,36 +36,31 @@ void Play::update(eScene* _next_scene)
     // 兵士召喚
     if (Input::Key1.clicked && cost >= 1)
     {
-        player.push_back(make_shared<Soldier>(Vec3(8.f, 0.5f, 0.f)));
+        character.push_back(make_shared<Soldier>(Vec3(8.f, 0.5f, 0.f)));
         // コスト消費
-        cost -= player.back()->get_cost();
+        cost -= character.back()->get_cost();
     }
 
     // 敵召喚
     if (Input::KeyQ.clicked)
     {
-        enemy.push_back(make_shared<Spider>(Vec3(32.f, 0.5f, 0.f)));
+        character.push_back(make_shared<Spider>(Vec3(32.f, 0.5f, 0.f)));
     }
 
-    // 味方更新
-    for (auto i : player)
-    {
-        i->update();
-    }
-    // 敵更新
-    for (auto i : enemy)
+    // キャラクター更新
+    for (auto i : character)
     {
         i->update();
     }
 
-    // プレイヤー攻撃処理
-    for (auto i : player)
-    {
-        for (auto j : enemy)
-        {
-            j->damage(i->get_attack());
-        }
-    }
+    //// プレイヤー攻撃処理
+    //for (auto i : player)
+    //{
+    //    for (auto j : enemy)
+    //    {
+    //        j->damage(i->get_attack());
+    //    }
+    //}
 
     // 防御判定
     //if (v_soldier.y == 0.0 && v_enemy.y == 0.0 && v_enemy.x == 8)
@@ -73,19 +68,12 @@ void Play::update(eScene* _next_scene)
     //    hp_soldier -= attack_enemy;
     //}
 
-    //// 死亡判定
-    for (int i = 0; i < player.size(); ++i)
+    // 死亡判定
+    for (int i = 0; i < character.size(); ++i)
     {
-        if (player.at(i)->is_dead())
+        if (character.at(i)->is_dead())
         {
-            player.erase(player.begin() + i);
-        }
-    }
-    for (int i = 0; i < enemy.size(); ++i)
-    {
-        if (enemy.at(i)->is_dead())
-        {
-            enemy.erase(enemy.begin() + i);
+            character.erase(character.begin() + i);
         }
     }
 
@@ -99,13 +87,8 @@ void Play::draw()
     // 拠点
     home.asMesh().translated(Vec3(0, s_home / 2.0, 0)).scaled(Vec3(1, 2, 1)).draw();
 
-    // 全味方描画
-    for (auto i : player)
-    {
-        i->draw();
-    }
-    // 全敵描画
-    for (auto i : enemy)
+    // キャラクター描画
+    for (auto i : character)
     {
         i->draw();
     }

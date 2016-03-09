@@ -14,10 +14,8 @@ private:
     Box home;
     double s_home;
 
-    // 味方コンテナ
-    std::vector<std::shared_ptr<Player>> player;
-    // 敵コンテナ
-    std::vector<std::shared_ptr<Enemy>> enemy;
+    // キャラクターコンテナ
+    std::vector<std::shared_ptr<Character>> character;
 
     // コスト
     float cost;
