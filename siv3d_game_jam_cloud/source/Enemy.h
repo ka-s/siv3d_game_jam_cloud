@@ -10,6 +10,8 @@ class Enemy : public Character
 protected:
     // 移動速度
     float speed;
+    // 拠点襲撃フラグ
+    bool attack_base;
 
 public:
     Enemy();
@@ -24,5 +26,5 @@ public:
     void move();
     
     // 拠点襲撃フラグ取得
-    
+    bool is_attack_base();
 };

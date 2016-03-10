@@ -68,12 +68,6 @@ void Play::update(eScene* _next_scene)
         }
     }
 
-    // –hŒä”»’è
-    //if (v_soldier.y == 0.0 && v_enemy.y == 0.0 && v_enemy.x == 8)
-    //{
-    //    hp_soldier -= attack_enemy;
-    //}
-
     // Ž€–S”»’è
     for (int i = 0; i < character.size(); ++i)
     {
@@ -86,6 +80,17 @@ void Play::update(eScene* _next_scene)
             }
             // íœ
             character.erase(character.begin() + i);
+        }
+    }
+
+    // –hŒä”»’è
+    for (auto i : character)
+    {
+        // ‹’“_‚ðUŒ‚‚³‚ê‚½‚ç
+        if (dynamic_pointer_cast<Enemy>(i)->is_attack_base())
+        {
+            // ƒŠƒUƒ‹ƒg‰æ–Ê‚Ö
+            *_next_scene = RESULT;
         }
     }
 
