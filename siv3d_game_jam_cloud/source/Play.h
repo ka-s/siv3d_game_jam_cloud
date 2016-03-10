@@ -13,6 +13,8 @@ private:
     // 拠点
     Box home;
     double s_home;
+    // カメラ
+    Camera camera;
 
     // キャラクターコンテナ
     std::vector<std::shared_ptr<Character>> character;

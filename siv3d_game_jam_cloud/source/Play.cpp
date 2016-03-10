@@ -13,6 +13,9 @@ Play::Play()
     // 拠点
     s_home = 8.0;
     home = Box(Vec3(0, 0, 0), s_home);
+    // カメラ
+    camera.lookat = Vec3(16.f, 0.f, 0.f);
+    camera.pos = Vec3(16.f, 4.f, -32.f);
 
     // コスト
     cost = 4.f;
@@ -30,8 +33,8 @@ Play::~Play()
 // 更新
 void Play::update(eScene* _next_scene)
 {
-    // フリーカメラ
-    Graphics3D::FreeCamera();
+    // カメラ
+    Graphics3D::SetCamera(camera);
 
     // 兵士召喚
     if (Input::Key1.clicked && cost >= 1)
@@ -86,6 +89,12 @@ void Play::update(eScene* _next_scene)
     // 防御判定
     for (auto i : character)
     {
+        // キャスト
+        if (dynamic_pointer_cast<Enemy>(i) == nullptr)
+        {
+            // 失敗したら戻る
+            continue;
+        }
         // 拠点を攻撃されたら
         if (dynamic_pointer_cast<Enemy>(i)->is_attack_base())
         {
