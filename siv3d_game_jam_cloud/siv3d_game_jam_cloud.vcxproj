@@ -212,7 +212,7 @@
     <ClInclude Include="source\Player.h" />
     <ClInclude Include="source\Result.h" />
     <ClInclude Include="source\Scene.h" />
-    <ClInclude Include="source\SceneNumber.h" />
+    <ClInclude Include="source\Enum.h" />
     <ClInclude Include="source\Soldier.h" />
     <ClInclude Include="source\Spider.h" />
     <ClInclude Include="source\stdafx.h" />

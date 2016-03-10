@@ -8,6 +8,8 @@ Enemy::Enemy()
 {
     // 移動速度
     speed = 1.f;
+    // 当たり判定タイプ
+    collision = ENEMY;
 }
 
 Enemy::~Enemy()

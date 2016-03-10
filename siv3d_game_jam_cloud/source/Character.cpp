@@ -14,6 +14,8 @@ Character::Character()
     attack = 1.f;
     // コスト
     cost = 1.f;
+    // 当たり判定タイプ
+    collision = NONE;
 }
 
 Character::~Character()
@@ -48,4 +50,10 @@ float Character::get_cost()
 float Character::get_attack()
 {
     return attack;
+}
+
+// 当たり判定タイプ取得
+eCollision Character::get_collision()
+{
+    return collision;
 }

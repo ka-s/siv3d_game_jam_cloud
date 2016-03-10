@@ -7,7 +7,7 @@
 #include <Siv3D.hpp>
 #include <memory>
 
-#include "SceneNumber.h"
+#include "Enum.h"
 #include "Const.h"
 
 #include "Character.h"

@@ -6,7 +6,8 @@
 
 Player::Player()
 {
-
+    // “–‚½‚è”»’èƒ^ƒCƒv
+    collision = PLAYER;
 }
 
 Player::~Player()

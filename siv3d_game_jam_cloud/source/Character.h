@@ -16,6 +16,8 @@ protected:
     float attack;
     // コスト
     float cost;
+    // 当たり判定タイプ
+    eCollision collision;
 
 public:
     Character();
@@ -35,4 +37,6 @@ public:
     float get_cost();
     // 攻撃力取得
     float get_attack();
+    // 当たり判定タイプ取得
+    eCollision get_collision();
 };

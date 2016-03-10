@@ -53,14 +53,20 @@ void Play::update(eScene* _next_scene)
         i->update();
     }
 
-    //// プレイヤー攻撃処理
-    //for (auto i : player)
-    //{
-    //    for (auto j : enemy)
-    //    {
-    //        j->damage(i->get_attack());
-    //    }
-    //}
+    // プレイヤー攻撃処理
+    for (auto i : character)
+    {
+        auto attack = i->get_collision();
+        for (auto j : character)
+        {
+            auto defense = j->get_collision();
+
+            if (attack == PLAYER && defense == ENEMY)
+            {
+                j->damage(i->get_attack());
+            }
+        }
+    }
 
     // 防御判定
     //if (v_soldier.y == 0.0 && v_enemy.y == 0.0 && v_enemy.x == 8)
