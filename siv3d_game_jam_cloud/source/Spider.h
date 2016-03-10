@@ -9,7 +9,9 @@ class Spider : public Enemy
 {
 private:
     // メッシュ
-    Box mesh;
+    Model mesh;
+    // テクスチャ
+    Texture t_base;
 
 public:
     Spider(Vec3 _location);

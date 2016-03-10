@@ -15,10 +15,12 @@ Spider::Spider(Vec3 _location)
     // コスト
     cost = 2.f;
     // 移動速度
-    speed = 0.01f;
+    speed = (32.f - 8.f) / (60.f * 3.f);
 
     // メッシュ
-    mesh = Box(location, 1);
+    mesh = Model(L"Assets/spider/spider01.obj");
+    // テクスチャ
+    t_base = Texture(L"Assets/spider/spider_desert.tex.tga");
 }
 
 Spider::~Spider()
@@ -36,7 +38,12 @@ void Spider::update()
 // 描画
 void Spider::draw()
 {
+    // 原点補正
+    Vec3 _location = location - Vec3(0.f, 0.5f, 0.f);
     // メッシュ
-    mesh.setPos(location);
-    mesh.draw();
+    mesh.nodes().at(0).mesh
+        .scaled(Vec3(0.1f, 0.1f, 0.1f))
+        .rotated(Vec3(0.f, Radians(90.f), 0.f))
+        .translated(_location)
+        .draw(t_base);
 }

@@ -42,7 +42,7 @@ void Play::update(eScene* _next_scene)
     }
 
     // “G¢Š«
-    if (Input::KeyQ.clicked)
+    if (Input::Key0.clicked)
     {
         character.push_back(make_shared<Spider>(Vec3(32.f, 0.5f, 0.f)));
     }
@@ -79,6 +79,12 @@ void Play::update(eScene* _next_scene)
     {
         if (character.at(i)->is_dead())
         {
+            // ƒRƒXƒgŠÒŒ³
+            if (character.at(i)->get_collision() == ENEMY)
+            {
+                cost += character.at(i)->get_cost();
+            }
+            // íœ
             character.erase(character.begin() + i);
         }
     }
