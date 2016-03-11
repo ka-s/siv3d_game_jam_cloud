@@ -143,5 +143,5 @@ void Play::draw()
     // コスト表示
     f_cost(L"コスト: ", cost).draw(0, 0, Palette::Black);
     // ヒントメッセージ
-    f_hint(L"1Keyで兵士召喚, Zで攻撃! ---- 現在の兵数: ", player_number, L" ---- Wave: ", ((181.f - (float)spawn_late) / 181.f) * 100.f).draw(0, MAX_Y - 32, Palette::Black);
+    f_hint(L"1Keyで兵士召喚(コスト10), Zで攻撃! ---- 現在の兵数: ", player_number, L" ---- Wave: ", ((181.f - (float)spawn_late) / 181.f) * 100.f).draw(0, MAX_Y - 32, Palette::Black);
 }

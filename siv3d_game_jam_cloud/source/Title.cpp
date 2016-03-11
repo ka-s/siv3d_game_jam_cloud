@@ -7,7 +7,7 @@
 Title::Title()
 {
     // タイトルテキストの大きさ設定
-    f_title = Font(64);
+    f_title = Font(32);
     // サブテキストの大きさを設定
     f_sub_text = Font(32);
 }
