@@ -17,8 +17,11 @@ Play::Play()
     camera.lookat = Vec3(16.f, 0.f, 0.f);
     camera.pos = Vec3(16.f, 4.f, -32.f);
 
+    // 味方数
+    player_number = 0;
+
     // コスト
-    cost = 4.f;
+    cost = 10.f;
     f_cost = Font(16);
 
     // 敵スポーンレート
@@ -40,11 +43,12 @@ void Play::update(eScene* _next_scene)
     Graphics3D::SetCamera(camera);
 
     // 兵士召喚
-    if (Input::Key1.clicked && cost >= 1)
+    if (Input::Key1.clicked && cost >= 10)
     {
         character.push_back(make_shared<Soldier>(Vec3(8.f, 0.5f, Random(-16.f, 16.f))));
         // コスト消費
         cost -= character.back()->get_cost();
+        player_number++;
     }
 
     // 敵召喚
@@ -82,6 +86,7 @@ void Play::update(eScene* _next_scene)
                 if (attack == PLAYER && defense == ENEMY)
                 {
                     j->damage(i->get_attack());
+                    break;
                 }
             }
         }
@@ -138,5 +143,5 @@ void Play::draw()
     // コスト表示
     f_cost(L"コスト: ", cost).draw(0, 0, Palette::Black);
     // ヒントメッセージ
-    f_hint(L"1Keyで兵士召喚, Zで攻撃!").draw(0, MAX_Y - 32, Palette::Black);
+    f_hint(L"1Keyで兵士召喚, Zで攻撃! ---- 現在の兵数: ", player_number, L" ---- Wave: ", ((181.f - (float)spawn_late) / 181.f) * 100.f).draw(0, MAX_Y - 32, Palette::Black);
 }

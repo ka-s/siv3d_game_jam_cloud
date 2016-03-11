@@ -18,6 +18,8 @@ private:
 
     // キャラクターコンテナ
     std::vector<std::shared_ptr<Character>> character;
+    // 味方数
+    int player_number;
 
     // コスト
     float cost;

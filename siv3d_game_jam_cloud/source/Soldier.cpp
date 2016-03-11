@@ -13,7 +13,7 @@ Soldier::Soldier(Vec3 _location)
     // UŒ‚—Í
     attack = 1.f;
     // ƒRƒXƒg
-    cost = 1.f;
+    cost = 10.f;
     // SE
     se = Sound(L"Assets/se_pistol/sen_ge_gun10.mp3");
 
