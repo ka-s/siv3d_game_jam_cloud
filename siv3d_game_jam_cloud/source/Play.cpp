@@ -21,6 +21,9 @@ Play::Play()
     cost = 4.f;
     f_cost = Font(16);
 
+    // 敵スポーンレート
+    spawn_late = 180;
+
     // ヒントメッセージ
     f_hint = Font(16);
 }
@@ -39,15 +42,22 @@ void Play::update(eScene* _next_scene)
     // 兵士召喚
     if (Input::Key1.clicked && cost >= 1)
     {
-        character.push_back(make_shared<Soldier>(Vec3(8.f, 0.5f, 0.f)));
+        character.push_back(make_shared<Soldier>(Vec3(8.f, 0.5f, Random(-16.f, 16.f))));
         // コスト消費
         cost -= character.back()->get_cost();
     }
 
     // 敵召喚
-    if (System::FrameCount() % (60 * 3) == 0)
+    if (Random(1, spawn_late) == 1)
     {
-        character.push_back(make_shared<Spider>(Vec3(32.f, 0.5f, 0.f)));
+        for (int i = 0; i < Random(1, 3); ++i)
+        {
+            character.push_back(make_shared<Spider>(Vec3(32.f, 0.5f, Random(-16.f, 16.f))));
+        }
+
+        // スポーンレートを上げる
+        spawn_late -= Random(0, 10);
+        if (spawn_late < 1) spawn_late = 1;
     }
 
     // キャラクター更新

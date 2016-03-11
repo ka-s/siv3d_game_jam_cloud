@@ -23,6 +23,9 @@ private:
     float cost;
     Font f_cost;
 
+    // 敵スポーンレート
+    int spawn_late;
+
     // ヒントメッセージ
     Font f_hint;
 
