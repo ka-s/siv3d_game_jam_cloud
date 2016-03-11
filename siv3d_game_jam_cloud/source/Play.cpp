@@ -45,7 +45,7 @@ void Play::update(eScene* _next_scene)
     }
 
     // “G¢Š«
-    if (Input::Key0.clicked)
+    if (System::FrameCount() % (60 * 3) == 0)
     {
         character.push_back(make_shared<Spider>(Vec3(32.f, 0.5f, 0.f)));
     }
@@ -57,16 +57,19 @@ void Play::update(eScene* _next_scene)
     }
 
     // ƒvƒŒƒCƒ„[UŒ‚ˆ—
-    for (auto i : character)
+    if (Input::KeyZ.clicked)
     {
-        auto attack = i->get_collision();
-        for (auto j : character)
+        for (auto i : character)
         {
-            auto defense = j->get_collision();
-
-            if (attack == PLAYER && defense == ENEMY)
+            auto attack = i->get_collision();
+            for (auto j : character)
             {
-                j->damage(i->get_attack());
+                auto defense = j->get_collision();
+
+                if (attack == PLAYER && defense == ENEMY)
+                {
+                    j->damage(i->get_attack());
+                }
             }
         }
     }

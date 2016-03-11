@@ -9,13 +9,13 @@ Spider::Spider(Vec3 _location)
     // 座標
     location = _location;
     // 体力
-    hit_point = 60.f;
+    hit_point = 5.f;
     // 攻撃力
     attack = 1.f;
     // コスト
     cost = 2.f;
     // 移動速度
-    speed = (32.f - 8.f) / (60.f * 3.f);
+    speed = (32.f - 8.f) / (60.f * 8.f);
 
     // メッシュ
     mesh = Model(L"Assets/spider/spider01.obj");
