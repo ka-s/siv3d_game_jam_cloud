@@ -126,7 +126,7 @@ void Play::draw()
     }
 
     // コスト表示
-    f_cost(L"コスト: ", cost).draw(0, 0);
+    f_cost(L"コスト: ", cost).draw(0, 0, Palette::Black);
     // ヒントメッセージ
-    f_hint(L"1.兵士(1) 2.重装備兵(2) 3.タレット(4) 4.戦車(8)").draw(0, MAX_Y - 32);
+    f_hint(L"1Keyで兵士召喚, Zで攻撃!").draw(0, MAX_Y - 32, Palette::Black);
 }
