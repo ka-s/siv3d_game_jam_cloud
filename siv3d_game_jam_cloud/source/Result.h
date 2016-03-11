@@ -8,6 +8,9 @@
 class Result : public Scene
 {
 private:
+    // ƒtƒHƒ“ƒg
+    Font f_text;
+    Font f_sub_text;
 
 public:
     Result();
