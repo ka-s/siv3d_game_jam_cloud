@@ -18,6 +18,8 @@ protected:
     float cost;
     // 当たり判定タイプ
     eCollision collision;
+    // 行動SE
+    Sound se;
 
 public:
     Character();
@@ -32,6 +34,8 @@ public:
     void damage(float _damage);
     // 死亡処理
     bool is_dead();
+    // 行動SE
+    void action_se();
 
     // コスト取得
     float get_cost();

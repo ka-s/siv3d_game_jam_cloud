@@ -40,6 +40,12 @@ bool Character::is_dead()
     return false;
 }
 
+// 行動SE
+void Character::action_se()
+{
+    se.playMulti();
+}
+
 // コスト取得
 float Character::get_cost()
 {

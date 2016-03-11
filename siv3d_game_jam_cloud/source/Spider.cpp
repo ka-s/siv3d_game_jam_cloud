@@ -16,6 +16,8 @@ Spider::Spider(Vec3 _location)
     cost = 2.f;
     // ˆÚ“®‘¬“x
     speed = (32.f - 8.f) / (60.f * 8.f);
+    // se
+    se = Sound(L"Assets/se_spider/ani_fa_mon03.mp3");
 
     // ƒƒbƒVƒ…
     mesh = Model(L"Assets/spider/spider01.obj");

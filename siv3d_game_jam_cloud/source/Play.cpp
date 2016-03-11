@@ -61,6 +61,9 @@ void Play::update(eScene* _next_scene)
     {
         for (auto i : character)
         {
+            // SE‚ð–Â‚ç‚·
+            i->action_se();
+
             auto attack = i->get_collision();
             for (auto j : character)
             {

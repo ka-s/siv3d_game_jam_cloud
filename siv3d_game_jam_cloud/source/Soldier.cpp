@@ -14,6 +14,8 @@ Soldier::Soldier(Vec3 _location)
     attack = 1.f;
     // コスト
     cost = 1.f;
+    // SE
+    se = Sound(L"Assets/se_pistol/sen_ge_gun10.mp3");
 
     // メッシュ
     mesh = Box(location, 1);
