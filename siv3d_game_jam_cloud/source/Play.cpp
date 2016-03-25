@@ -43,6 +43,7 @@ void Play::update(eScene* _next_scene)
     Graphics3D::SetCamera(camera);
 
     // 兵士召喚
+    /// ! プレイヤー召喚クラス
     if (Input::Key1.clicked && cost >= 10)
     {
         character.push_back(make_shared<Soldier>(Vec3(8.f, 0.5f, Random(-16.f, 16.f))));
@@ -52,6 +53,7 @@ void Play::update(eScene* _next_scene)
     }
 
     // 敵召喚
+    /// ! 敵召喚クラス
     if (Random(1, spawn_late) == 1)
     {
         for (int i = 0; i < Random(1, 3); ++i)
@@ -69,6 +71,8 @@ void Play::update(eScene* _next_scene)
     {
         i->update();
     }
+
+    /// ここから当たり判定 ----------------
 
     // プレイヤー攻撃処理
     if (Input::KeyZ.clicked)

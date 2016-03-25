@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="リソース ファイル">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -57,6 +49,15 @@
     </Filter>
     <Filter Include="リソース ファイル\Engine\dll%28x64%29\TobiiEyeX">
       <UniqueIdentifier>{9a53d0f1-1b2a-455a-83c6-03b46311e942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{a0bb0b83-9534-4fd5-af7b-20060fb00f20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{660bcd74-18cf-4b09-924c-86789c63fae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Important">
+      <UniqueIdentifier>{86aa6927-df01-403d-8c64-bc259fcf695d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -339,82 +340,82 @@
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Main.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Game.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="source\stdafx.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Scene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Title.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Play.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Result.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="source\Character.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Player.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>Character</Filter>
     </ClCompile>
     <ClCompile Include="source\Enemy.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Player.cpp">
+      <Filter>Character</Filter>
     </ClCompile>
     <ClCompile Include="source\Soldier.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>Character</Filter>
     </ClCompile>
     <ClCompile Include="source\Spider.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Play.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Result.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Title.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Main.cpp">
+      <Filter>Important</Filter>
+    </ClCompile>
+    <ClCompile Include="source\stdafx.cpp">
+      <Filter>Important</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Game.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="source\stdafx.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Scene.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Title.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Const.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Play.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Result.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="source\Character.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Player.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>Character</Filter>
     </ClInclude>
     <ClInclude Include="source\Enemy.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>Character</Filter>
     </ClInclude>
-    <ClInclude Include="source\Soldier.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="source\Player.h">
+      <Filter>Character</Filter>
     </ClInclude>
     <ClInclude Include="source\Spider.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Soldier.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Play.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Result.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Title.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Const.h">
+      <Filter>Important</Filter>
     </ClInclude>
     <ClInclude Include="source\Enum.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>Important</Filter>
+    </ClInclude>
+    <ClInclude Include="source\stdafx.h">
+      <Filter>Important</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
